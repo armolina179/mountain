@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore comprehensive information on mountain communities around the world. Discover their unique cultures, traditions, and landscapes.">
+    <title>Explore :: Mountain Communities of the World</title>
+    <link rel="stylesheet" href="mtncom.css">
+</head>
+<body>
+    <div id="wrapper">
+        <header><a href="index.html"><h1>Mountain Communities of the World</h1></a></header>
+        <nav>
+            <ul>
+                <li><a href="map.html">Map</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Explore Mountain Cultures</h2>
+            <div class="slideshow-container">
+                <div class="slides fade">
+                    <div class="slide-content">
+                        <img src="jorsale.jpg" alt="Jorsale village in Nepal">
+                        <div class="text">
+                            <h3>Jorsale Village, Nepal</h3><br>
+                            <p>Jorsale Village, located at an altitude of 2,740m in the Himalayan mountain range, serves as a vital stop for travelers heading to Mount Everest. This village, like many in Nepal, is home to indigenous communities that hold the mountains sacred in their religions, namely Buddhism. The people here rely on animal husbandry, including sheep, goat, and yak herding, for their livelihoods, providing essentials like clothing, food, and fuel. Forestry, trade, and tourism also play significant roles in their economy.</p>
+                            <p>Jorsale Village also faces significant challenges. Climate change poses a severe threat to the region, causing unpredictable weather patterns, glacial melt, and increased risk of natural disasters like landslides and floods. These changes threaten the traditional ways of life and the economic stability of the village. Additionally, the economic reliance on tourism can be precarious, as fluctuations in visitor numbers due to global events or environmental factors can lead to financial instability for many families.</p>
+                            <p><em>Image source: Alexander Fiebrandt</em></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slides fade">
+                    <div class="slide-content">
+                        <img src="quechuawoman.jpeg" alt="Quechua Woman from Peru">
+                        <div class="text">
+                            <h3>Quechua People</h3><br>
+                            <p>The Quechua people, descendants of the ancient Inca civilization, inhabit the Andean highlands of South America, primarily in Peru, Bolivia, and Ecuador. Known for their vibrant culture, traditional weaving, and rich agricultural practices, the Quechua maintain a deep connection to their ancestral lands and customs. They cultivate crops like potatoes, maize, and quinoa, utilizing advanced agricultural terraces and irrigation systems developed centuries ago.</p>
+                            <p>Despite their resilience, the Quechua face numerous challenges. Climate change has brought about unpredictable weather patterns, affecting crop yields and threatening food security. Increased temperatures and shifting rainfall patterns lead to droughts and flooding, making traditional farming methods less reliable. Additionally, economic hardships are common as market access and fair trade opportunities are limited, leaving many Quechua communities struggling to maintain their livelihoods. Efforts to preserve their culture and improve economic opportunities are crucial for the sustainability of the Quechua way of life.</p>
+                            <p>Image source: Dario Severi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slides fade">
+                    <div class="slide-content">
+                        <img src="quanaaq.png" alt="Quanaaq village in Greenland">
+                        <div class="text">
+                            <h3>Quanaaq, Greenland</h3><br>
+                            <p>The Inuit community in Qaanaaq, Greenland, represents one of the northernmost indigenous populations in the world. Known for their extraordinary adaptability and deep cultural heritage, the Inuit have thrived in the harsh Arctic environment for centuries. They rely on traditional practices such as hunting, fishing, and dog sledding, which are integral to their way of life and cultural identity.</p>
+                            <p>Qaanaaq's Inuit face significant challenges due to climate change. The warming Arctic is causing sea ice to melt, disrupting traditional hunting routes and threatening wildlife populations essential for their sustenance. Additionally, unpredictable weather patterns and thawing permafrost impact their infrastructure and daily life. Despite these challenges, the Inuit are actively working to preserve their culture and adapt to changing conditions, ensuring the survival and continuity of their rich heritage in a rapidly evolving environment.</p>
+
+                            <p><em>Image source: Aningaaq Rosing Carlsen</em></p>
+                        </div>
+                    </div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            <a href="https://www.iwgia.org/en/">Dive deeper!</a>
+        </main>
+        <footer>
+            Copyright &copy; Ariel Molina for CIS300
+            <br> 
+            <a href="mailto:wmolina1@asu.edu">Ariel Molina</a>
+        </footer>
+    </div>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "flex";  
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+</body>
+</html>
